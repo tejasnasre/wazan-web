@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="none">
+  <defs>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="6" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  <path
+    d="M60 400 Q80 400 95 355 L130 260 Q145 220 160 260 L200 355 Q215 395 235 340 L275 230 Q290 190 310 240 L345 325 Q360 365 380 295 L420 165 Q435 120 455 135 L480 115"
+    stroke="#CCFF00"
+    stroke-width="28"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    fill="none"
+    filter="url(#glow)"
+  />
+  <!-- Arrowhead -->
+  <polygon
+    points="480,115 440,95 455,145"
+    fill="#CCFF00"
+    stroke="#CCFF00"
+    stroke-width="8"
+    stroke-linejoin="round"
+  />
+</svg>

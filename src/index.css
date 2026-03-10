@@ -1,0 +1,116 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 0 3% 10%;
+
+    --card: 160 33% 98%;
+    --card-foreground: 0 3% 10%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 3% 10%;
+
+    --primary: 68 99% 48%;
+    --primary-foreground: 0 3% 10%;
+
+    --secondary: 160 33% 98%;
+    --secondary-foreground: 0 3% 10%;
+
+    --muted: 160 10% 94%;
+    --muted-foreground: 75 4% 55%;
+
+    --accent: 68 99% 48%;
+    --accent-foreground: 0 3% 10%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 160 10% 90%;
+    --input: 160 10% 90%;
+    --ring: 68 99% 48%;
+
+    --radius: 1rem;
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+
+    --surface: 160 33% 98%;
+    --accent-glow: 68 99% 48% / 0.35;
+  }
+
+  .dark {
+    --background: 0 3% 10%;
+    --foreground: 0 0% 100%;
+    --card: 0 3% 14%;
+    --card-foreground: 0 0% 100%;
+    --popover: 0 3% 14%;
+    --popover-foreground: 0 0% 100%;
+    --primary: 72 78% 87%;
+    --primary-foreground: 0 3% 10%;
+    --secondary: 0 3% 18%;
+    --secondary-foreground: 0 0% 100%;
+    --muted: 0 3% 18%;
+    --muted-foreground: 75 4% 65%;
+    --accent: 72 78% 87%;
+    --accent-foreground: 0 3% 10%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 0 3% 20%;
+    --input: 0 3% 20%;
+    --ring: 72 78% 87%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-heading;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Poppins', sans-serif;
+  }
+}
+
+@layer utilities {
+  .hover-lift {
+    @apply transition-transform duration-300 hover:-translate-y-1;
+  }
+
+  .hover-glow {
+    @apply transition-shadow duration-300;
+  }
+
+  .hover-glow:hover {
+    box-shadow: 0 0 20px hsl(var(--accent-glow));
+  }
+
+  @keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+  }
+
+  .animate-float {
+    animation: float 3s ease-in-out infinite;
+  }
+
+  .animate-float-delayed {
+    animation: float 3s ease-in-out 1s infinite;
+  }
+
+  .animate-float-slow {
+    animation: float 4s ease-in-out 0.5s infinite;
+  }
+}
