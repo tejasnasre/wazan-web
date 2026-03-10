@@ -4,7 +4,7 @@ import FeaturesGrid from "@/components/landing/FeaturesGrid";
 import ProductShowcase from "@/components/landing/ProductShowcase";
 import StepsSection from "@/components/landing/StepsSection";
 import Testimonials from "@/components/landing/Testimonials";
-
+import WaitlistSection from "@/components/landing/WaitlistSection";
 import PricingSection from "@/components/landing/PricingSection";
 import CTASection from "@/components/landing/CTASection";
 import Footer from "@/components/landing/Footer";
@@ -48,6 +48,7 @@ const Index = () => {
 
       <StepsSection />
       <Testimonials />
+      <WaitlistSection />
 
       <PricingSection />
       <CTASection />
